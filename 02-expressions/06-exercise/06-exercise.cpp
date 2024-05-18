@@ -19,6 +19,6 @@ int main () {
 
     average = (grade1 + grade2 + grade3) / 3;
 
-    cout << "Average: " << average;
+    cout << "Average: " << average << endl;
     return 0;
 }
