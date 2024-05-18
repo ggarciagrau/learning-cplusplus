@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 
-    int num1, numFrNum, numFrDen, den1, denFrNum, denFrDen, result;
+    float num1, numFrNum, numFrDen, den1, denFrNum, denFrDen, result;
 
     cout << "Introduce first numerator number> ";
     cin >> num1;
@@ -25,6 +25,7 @@ int main()
 
     result = (num1 + (numFrNum / numFrDen)) / (den1 + (denFrNum / denFrDen));
 
+    cout.precision(2);
     cout << "Result: " << result;
 
     return 0;
