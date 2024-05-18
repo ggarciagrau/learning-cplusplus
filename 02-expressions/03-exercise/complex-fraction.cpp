@@ -26,7 +26,7 @@ int main()
     result = (num1 + (numFrNum / numFrDen)) / (den1 + (denFrNum / denFrDen));
 
     cout.precision(2);
-    cout << "Result: " << result;
+    cout << "Result: " << result << endl;
 
     return 0;
 }
