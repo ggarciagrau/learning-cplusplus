@@ -28,5 +28,7 @@ int main()
         cout << "Number out of bounds" << endl;
     }
 
+    getch();
+
     return 0;
 }
