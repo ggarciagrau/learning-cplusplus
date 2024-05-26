@@ -3,7 +3,6 @@
  */
 
 #include <iostream>
-#include <curses.h>
 
 using namespace std;
 
@@ -12,23 +11,17 @@ int main()
 
     int num;
 
-    cout << "Introduce a number between 1 and 10> ";
-    cin >> num;
-
-    if (num >= 1 && num <= 10)
+    do
     {
+        cout << "Introduce a number between 1 and 10> ";
+        cin >> num;
 
-        for (int i = 1; i <= 10; i++)
-        {
-            cout << num << " * " << i << " = " << num * i << endl;
-        }
-    }
-    else
+    } while (num < 1 || num > 10);
+
+    for (int i = 1; i <= 10; i++)
     {
-        cout << "Number out of bounds" << endl;
+        cout << num << " * " << i << " = " << num * i << endl;
     }
-
-    getch();
 
     return 0;
 }
