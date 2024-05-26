@@ -1,4 +1,5 @@
 #include <iostream>
+#include <curses.h>
 
 using namespace std;
 
@@ -10,6 +11,9 @@ int main () {
         cout << i << endl;
         i++;
     }
+
+    // Prevents CLI auto-closing when the execution finishes
+    getch();
 
     return 0;
 }
