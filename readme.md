@@ -7,6 +7,8 @@
 
 Another library to do the same is `stdlib.h` with the instruction `system("pause")`.
 
+`unistd.h` contains the function `sleep` to stop the execution for a certain seconds.
+
 ## Native functions
 
 `rand` is for generating random numbers.
