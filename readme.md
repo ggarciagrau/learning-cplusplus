@@ -14,3 +14,14 @@ Another library to do the same is `stdlib.h` with the instruction `system("pause
 `rand` is for generating random numbers.
 `srand` is for setting a seed for the rand function.
 `time` returns the current timestamp. If the number is 0, returns the value, otherwise it should receive a pointer to a `time_t` object to store the value in int.
+
+## Arrays
+C++ arrays come from C arrays. C arrays are which are very primitive and simple. Arrays in C doesn't have bound checking, so you can access to any numeric index without having an out of bounds exception unlike Java (but you'd be accessing some random ram address). This is a design decision (`it's a feature, not a bug!`) because accessing an index out of bounds is considered a non defined behaviour. Moreover it follows the C principle `don't pay for what you don't use`, if the code is correct, you shouldn't be forced to use a bound-checking system.
+
+Accessing to out of bounds indexes works in the following way:
+- Define an array of X of N positions.
+- C only stores the address of the first element, let's say 0x1000.
+- When you access the first element, C will search the 0x1000 adress. The array starts at 0x1000 and the first element goes from 0x1000 to 0x1003 (4 bytes).
+- When you want to access the second elment (let's wonder that it's an integer array) will calculate the address of the next elemnt, i.e, it'll sum 4 bytes to the original address, 0x1004.
+
+C accesses raw the start address and calculates where the index should be located, even if it's out of bounds.
