@@ -1,6 +1,9 @@
 # Compile
 `g++ -o calculate-iva calculate-iva.cpp`
 
+## Types
+1. When you define an `string` as `char` array, you have to specify the last character as null `\0`. 
+
 ## Libraries
 
 `curse.h` is the equivalent library for `conio.h` in Linux, and it can be installed with `sudo apt-get install libncurses5-dev libncursesw5-dev`. Both are used to create text user interfaces.
@@ -14,6 +17,9 @@ Another library to do the same is `stdlib.h` with the instruction `system("pause
 `rand` is for generating random numbers.
 `srand` is for setting a seed for the rand function.
 `time` returns the current timestamp. If the number is 0, returns the value, otherwise it should receive a pointer to a `time_t` object to store the value in int.
+`sizeof` returns the length of an array.
+`fgets`reads stdin including whitespaces. 
+`cin.getline`reads stdin including whitespaces. 
 
 ## Arrays
 C++ arrays come from C arrays. C arrays are which are very primitive and simple. Arrays in C doesn't have bound checking, so you can access to any numeric index without having an out of bounds exception unlike Java (but you'd be accessing some random ram address). This is a design decision (`it's a feature, not a bug!`) because accessing an index out of bounds is considered a non defined behaviour. Moreover it follows the C principle `don't pay for what you don't use`, if the code is correct, you shouldn't be forced to use a bound-checking system.
