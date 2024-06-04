@@ -12,6 +12,8 @@ Another library to do the same is `stdlib.h` with the instruction `system("pause
 
 `unistd.h` contains the function `sleep` to stop the execution for a certain seconds.
 
+`string.h` contains the function `strlen` to determine the size of a string.
+
 ## Native functions
 
 `rand` is for generating random numbers.
