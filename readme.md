@@ -1,5 +1,39 @@
-# Compile
+# C++
+
+## Compile
 `g++ -o calculate-iva calculate-iva.cpp`
+
+## Header files
+Code reusing between diffent files is not straightforward as in other languages such as Javascript or Python.
+
+C++ requires to create a header file. A header file contains the declarations of the reusable content (ex: functions, constants).
+
+Header files with *.h extension come from C standard library, C++ should use *.hpp.
+
+Example `functions.cpp`:
+```
+void welcome() {
+    std::cout << "Welcome" << std::endl;
+}
+```
+
+`functions.hpp`:
+```
+#ifndef FUNCTIONS_HPP
+#define FUNCTIONS_HPP
+
+void welcome();
+
+#endif
+```
+
+`main.cpp`:
+```
+#include <iostream>
+#include "functions.hpp"
+
+...
+```
 
 ## Types
 1. When you define an `string` as `char` array, you have to specify the last character as null `\0`. 
@@ -12,7 +46,10 @@ Another library to do the same is `stdlib.h` with the instruction `system("pause
 
 `unistd.h` contains the function `sleep` to stop the execution for a certain seconds.
 
-`string.h` contains the function `strlen` to determine the size of a string.
+### `string.h`
+`string.h` contains the functions:
+- `strlen` to determine the size of a string.
+- `strcpy` to copy the contents of one string to another.
 
 ## Native functions
 
