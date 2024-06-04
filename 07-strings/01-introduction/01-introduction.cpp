@@ -24,6 +24,7 @@ int main()
 
     // cout << "Name and surname C> ";
     // cin.getline(nameAndSurname3, sizeof(nameAndSurname3));
+    // cin.getline(nameAndSurname3, sizeof(nameAndSurname3), '\n');
     // cout << "C) Name and surname: " << nameAndSurname3 << endl;
 
     return 0;
